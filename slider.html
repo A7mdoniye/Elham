@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World of Elham</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="slider-container">
+      <div class="slider-images">
+
+        <div class="slider-img">
+          <img src="Images/Beauty.jpg" alt="1" />
+          <h1>Black</h1>
+          <div class="details">
+            <h2>My beautiful girl</h2>
+            <p>I still get butterflies like the first time I saw you.</p>
+          </div>
+          <audio src="songs/Sean Kingston - Beautiful Girls (Lyrics).mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img">
+          <img src="Images/omg sooo cute.jpg" alt="2" />
+          <h1>Brown</h1>
+          <div class="details">
+            <h2>What I can say?</h2>
+            <p>If someone were to ask me about my ideal woman, I wouldn't have had the words to describe you. You have surpassed all expectations, fantasies and dreams combined.</p>
+          </div>
+          <audio src="songs/Billie Eilish - BIRDS OF A FEATHER.mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img">
+          <img src="Images/omg body is teaaaa.jpg" alt="3" />
+          <h1>Blue</h1>
+          <div class="details">
+            <h2>Elham = inspiration</h2>
+            <p>I was once told that I would fall in love with a gorgeous woman. Still, I could never have imagined that this woman would be fantastically pretty with the most extraordinary personality I've ever seen.</p>
+          </div>
+          <audio src="songs/معتز صباحي كوني - كلمات الشاعر جهاد عوض الله.mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img active">
+          <img src="Images/with the dressss ahhh.jpg" alt="4" />
+          <h1>White</h1>
+          <div class="details">
+            <h2>You are gorgeous girl!!</h2>
+            <p>There is no going back to having you in my life because you are amazing. You are a miracle, and I realized this from the first moment I set my eyes on you.</p>
+          </div>
+          <audio src="songs/SZA - Snooze (Lyrics).mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img">
+          <img src="Images/my doctor.jpg" alt="5" />
+          <h1>Doctor</h1>
+          <div class="details">
+            <h2>Dr. Elham</h2>
+            <p>Can you fix my heart?</p>
+          </div>
+          <audio src="songs/Khalid - Location (Lyrics).mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img">
+          <img src="Images/redsss.jpg" alt="6" />
+          <h1>Rose</h1>
+          <div class="details">
+            <h2>Testimony</h2>
+            <p>From the moment you came into my life, everything changed for the better. Your smile brings me peace, and your presence gives my heart a reason to beat stronger every day.
+
+You’re not just the woman I love — you’re my best friend, my inspiration, and the one I want to share forever with. That’s why I choose to crown this love with marriage.</p>
+          </div>
+          <audio src="songs/Christina Perri - A Thousand Years.mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slider-img">
+          <img src="Images/the eyes chicko.jpg" alt="7" />
+          <h1>You</h1>
+          <div class="details">
+            <h2>You are all I want</h2>
+            <p>My heart and my life have been filled ever since I met you. You fill me with happiness, make me thankful for all things — big and small — in our lives, and have made me believe in soulmates. Our love will last forever.</p>
+          </div>
+          <audio src="songs/Someone Like You - Adele (Lyrics).mp3" class="audio"></audio>
+          <div class="overlay"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="js/jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        $(".slider-img").hover(
+          function () {
+            let audio = $(this).find("audio")[0];
+            if (audio) {
+              audio.currentTime = 0;
+              audio.play();
+            }
+          },
+          function () {
+            let audio = $(this).find("audio")[0];
+            if (audio) {
+              audio.pause();
+              audio.currentTime = 0;
+            }
+          }
+        );
+      });
+    </script>
+  </body>
+</html>
